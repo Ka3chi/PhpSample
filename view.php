@@ -20,12 +20,12 @@ if($result = mysqli_query($link, $sql)){
         echo "</tr>";
         while ($row = mysqli_fetch_array($result)){
             echo "<tr>";
-            $id = $row['userid'] . "</td>";
+            $id = $row['userid'];
             echo "<td>" . $row['userid'] . "</td>";
             echo "<td>" . $row['username'] . "</td>";
             echo "<td>" . $row['fullname'] . "</td>";
             echo "<td>" . $row['datecreated'] . "</td>";
-            echo "<td> <a href = 'updateview.php?userid=$id'>Edit</a>";
+            echo "<td> <a href = 'updateview.php?userid=$id'>Edit</a></td>";
 
             echo "</tr>";
         }
@@ -35,11 +35,11 @@ if($result = mysqli_query($link, $sql)){
         mysqli_free_result($result);
     } else {
         echo "No Records were found.";
-    } else {
+    } 
+} else {
         echo "ERROR: Could not able to excute $sql. " . mysqli_error($link);
     }
     
     //close connection
     mysqli_close($link);
-}
 ?>

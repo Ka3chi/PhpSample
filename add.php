@@ -11,12 +11,14 @@ if ($link === false){
 }
 
 //Query
-$sql = "INSERT INTO tbuser SET username='$username', password='$password', fullname='fullname'";
-if (mysli_query($link, $sql)){
+$sql = "INSERT INTO tbluser SET username='$username', password='$password', fullname='$fullname'";
+
+if (mysqli_query($link, $sql)){
     header("Location: view.php");
 } else {
     echo "ERROR: Could not able to excute $sql. " . mysqli_error($link);
 }
+
 //Close connection
 mysqli_close($link);
 ?>
