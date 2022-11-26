@@ -15,7 +15,7 @@ $sql = "INSERT INTO tbuser SET username='$username', password='$password', fulln
 if (mysli_query($link, $sql)){
     header("Location: view.php");
 } else {
-    echo "ERROR: Could not able to excute sql. " . mysqli_error($link);
+    echo "ERROR: Could not able to excute $sql. " . mysqli_error($link);
 }
 //Close connection
 mysqli_close($link);
