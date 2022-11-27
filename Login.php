@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" >
-    <title>Document</title>
+    <title>Log In</title>
 </head>
-<body>
+<body class="cover">
 <center>
     <div class="inputform">
     <form method="post">            

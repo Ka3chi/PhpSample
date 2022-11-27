@@ -29,9 +29,22 @@
     /* align-self: center; */
     /* align-items: center; */
 }
-body{
-    background-image: url('./images/background.jpg');
+.cover{
+    background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+}
+th,td{
+    text-align: center;
+}
+.invent th{
+   padding: 10px;
+}
+span{
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+
 }
