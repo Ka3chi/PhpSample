@@ -34,7 +34,7 @@ if ($link === false){
 }
 
 //Query
-
+error_reporting(E_ALL ^ E_WARNING);
 $sql = "SELECT * FROM tbluser WHERE username='$username'";
 
 $result = mysqli_query($link, $sql);
@@ -45,7 +45,7 @@ if (mysqli_num_rows($result)==1){
     $result = mysqli_query($link, $sql);
 
     if(mysqli_num_rows($result)==1){
-        header("Location: Dashboard.html");
+        header("Location: Dashboard.php");
     } else {
         echo "Wrong Password";
     }
